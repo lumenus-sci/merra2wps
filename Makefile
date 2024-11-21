@@ -49,12 +49,12 @@ OBJS_DIR = obj/Debug/
 EXE_DIR = bin/Debug/
 
 EXE = merra2wrf
-FC = gfortran
-LD = gfortran
-IDIR = -I/home/suleiman/local/include 
+FC = ifx
+LD = ifx
+IDIR = -I/opt/apps/intel24/netcdf/4.9.2/include 
 CFLAGS = -Wall -g  -J$(OBJS_DIR) $(IDIR)
 LFLAGS = 
-LIBS = -L/home/suleiman/local/lib -lnetcdff -lnetcdf 
+LIBS = -L/opt/apps/intel24/netcdf/4.9.2/lib -lnetcdff -lnetcdf 
 
 VPATH = $(SRC_DIR_f90d1):$(OBJS_DIR):$(SRC_DIR_d1):$(OBJS_DIR):$(SRC_DIR_cbpd1):$(OBJS_DIR)
 OBJS = $(addprefix $(OBJS_DIR), $(OBJS_f90d1) $(OBJS_d1) $(OBJS_cbpd1))
